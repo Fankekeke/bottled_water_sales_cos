@@ -1,50 +1,17 @@
-### 基于SpringBoot + Vue的桶装水销售配送小程序.
+![](https://img.shields.io/badge/License-MIT-blue.svg)
 
-水站管理、桶装水配送、电子水票系统、送水上门小程序、饮用水调度平台
+![](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)
 
-###### 管理员：
-收货地址 、商铺审核 、公告信息 、商品管理 、用户评价 、消息管理 、订单管理 、贴子管理 、商铺管理 、用户管理 、商品类型 、数据统计。
+![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-###### 商铺管理员：
-账户注册登录、密码修改、商铺信息 、我的商品 、商家订单 、订单评价 、消息回复 、商铺审核 、用户沟通。
+# 基于 SpringBoot + Vue  的桶装水销售配送小程序
 
-###### 用户：
-小程序账户注册登录、商品购买、加入购物车、商品搜索、在线沟通、我的订单、收货地址、我的信息、社区论坛、消息回复、消息通知、订单评价。
+在线订水 · 智能配送 · 空桶押金 · 水票核销 | 面向平台管理员、商铺管理员与居民用户的一站式桶装水销售配送平台
 
-#####  商铺入驻与经营准入
-###### 商铺管理/审核： 管理员对水站资质进行严格审核与备案，确保经营主体的合法性与服务可靠性。
-
-###### 商铺信息/我的： 水站管理员维护门店地址、营业时间及配送范围，打造专业的线上供水窗口。
-
-###### 商品类型/管理： 统一规范桶装水、饮水机等产品分类，支持管理员全局调控平台商品结构。
-
-##### 商品选购与购物体验
-###### 商品搜索/购买： 用户通过关键词快速锁定水品牌，支持一键下单或灵活加入购物车合并结算。
-
-###### 我的商品/管理： 商家实时上架各类规格的矿泉水或纯净水，展示产品细节，吸引校园及社区用户。
-
-###### 我的收藏/信息： 用户标记常订水源与常用收货地址，极大简化重复下单流程，提升订水效率。
-
-##### 订单调度与配送闭环
-###### 订单管理/商家： 全流程监控派送、确认及空桶回收状态，确保每一桶水都能准时送达指定地址。
-
-###### 商铺/商家订单： 针对水站提供专属订单视图，支持批量处理配送任务，提升最后一公里响应速度。
-
-###### 在线/用户沟通： 搭建即时通讯桥梁，方便买卖双方确认配送时间或沟通空桶存放位置等细节。
-
-##### 评价反馈与社区交互
-###### 用户/订单评价： 记录用户对水质及配送时效的反馈，通过口碑评价体系筛选优质服务水站。
-
-###### 社区论坛/贴子： 提供用户交流空间，分享饮水健康知识或水站优惠信息，增强平台用户粘性。
-
-###### 消息/消息回复： 整合订单状态提醒与在线咨询回复，确保配送变动等关键信息能够实时触达。
-
-##### 运营看板与基础支撑
-###### 数据统计： 自动汇总销量分布、配送效率及用户画像，通过数据可视化辅助平台优化经营策略。
-
-###### 公告信息/管理： 发布水厂调价、节日放假或配送通知，确保平台资讯传递的即时性与准确性。
+本项目是一套基于 **Spring Boot + UniApp 微信小程序** 的桶装水销售配送系统，采用前后端分离架构，覆盖 **平台管理员、商铺管理员、用户** 三类核心角色。系统围绕"商铺入驻审核 → 商品上架 → 用户下单 → 在线支付 → 智能派单 → 配送履约 → 空桶押金管理 → 评价互动"的完整业务闭环设计，打通从订水到配送的全流程，构建高效便捷的智慧送水平台。
 
 #### 安装环境
+️**注意**：请确保您的开发环境已安装以下依赖。
 
 JAVA 环境 
 
@@ -52,24 +19,148 @@ Node.js环境 [https://nodejs.org/en/] 选择14.17
 
 Yarn 打开cmd， 输入npm install -g yarn !!!必须安装完毕nodejs
 
-Mysql 数据库 [https://blog.csdn.net/qq_40303031/article/details/88935262] 一定要把账户和密码记住
+Mysql 数据库 一定要把账户和密码记住
 
 redis
 
-Idea 编译器 [https://blog.csdn.net/weixin_44505194/article/details/104452880]
+Idea 编译器
 
-WebStorm OR VScode 编译器 [https://www.jianshu.com/p/d63b5bae9dff]
+WebStorm OR VScode 编译器
 
 #### 采用技术及功能
 
 后端：SpringBoot、MybatisPlus、MySQL、Redis、
 前端：Vue、Apex、Antd、Axios
 
-平台前端：vue(框架) + vuex(全局缓存) + rue-router(路由) + axios(请求插件) + apex(图表)  + antd-ui(ui组件)
+平台前端：vue(框架) + vuex(全局缓存) + rue-router(路由) + axios(请求插件) + apex(图表)  + antd-ui(ui组件) + 百度地图 API
 
 平台后台：springboot(框架) + redis(缓存中间件) + shiro(权限中间件) + mybatisplus(orm) + restful风格接口 + mysql(数据库)
 
 开发环境：windows10 or windows7 ， vscode or webstorm ， idea + lambok
+
+---
+
+## 核心特性
+
+- **商铺入驻审核机制**：平台管理员统一审核入驻商铺资质，商铺管理员独立管理商品与订单，支持多商铺协同运营。
+- **桶装水专属业务闭环**：支持电子水票购买与核销、空桶押金缴纳与退还、上楼费自动计算等送水行业特色功能。
+- **智能配送管理**：订单支持手动派单与抢单两种模式，配送员接单后一键导航，送达后拍照确认，全程状态实时同步。
+- **社区论坛互动**：内置社区论坛模块，用户可发帖分享饮水经验、回复讨论，管理员进行内容审核，构建活跃的社区氛围。
+- **多维数据统计**：管理员端提供订单量、交易额、热销商品、配送时效等多维度统计图表，辅助经营决策。
+---
+
+## 适用场景
+
+- 桶装水配送平台（单店/多店连锁）
+- 社区送水服务小程序
+- 同城配送订水系统
+- 计算机类毕业设计/课程设计项目
+---
+
+## 功能模块概览
+
+## 平台管理员端（Web 后台）
+
+平台管理员为系统运营中枢，负责全局管控：
+
+### 基础资源管理
+
+- **商铺管理**：管理入驻商铺信息，包括商铺名称、位置、联系人、联系电话、服务半径、资质文件、审核状态，支持商铺上下架与违规处理。
+- **商铺审核**：审核新入驻商铺提交的资质材料（营业执照、食品经营许可证等），审核通过后商铺方可上线运营。
+- **商品类型**：管理商品分类体系，包括桶装水、瓶装水、饮水机、水票套餐等分类，支持分类增删改查与排序。
+- **商品管理**：查看全平台商品信息，包括商品名称、所属商铺、规格、价格、库存、状态（上架/下架），支持违规商品下架处理。
+
+### 订单与配送
+
+- **订单管理**：查看全平台订单，包括订单号、下单用户、商铺名称、商品信息、订单金额、配送状态、支付状态，支持订单干预与退款处理。
+- **收货地址**：查看用户收货地址数据，支持异常地址清理与地址库维护。
+
+### 用户与社区
+
+- **用户管理**：管理注册用户，包括用户昵称、手机号、注册时间、账户状态，支持账户冻结/解冻。
+- **贴子管理**：管理社区论坛内容，包括帖子审核、违规帖子删除、帖子置顶/加精、板块管理。
+- **用户评价**：管理全平台订单评价，查看用户提交的星级评分与图文评价，支持违规评价屏蔽。
+
+### 运营与统计
+
+- **公告信息**：发布平台公告，包括优惠活动通知、系统维护公告、新商铺上线通知等，支持公告置顶与多端推送。
+- **消息管理**：查看全平台消息记录，包括系统通知、用户咨询、商铺回复，支持消息审核与违规内容处理。
+- **数据统计**：通过 ECharts 图表展示平台核心数据，包括订单量趋势、交易额统计、热销商品排行、商铺业绩排名、用户增长曲线等。
+
+## 商铺管理员端（Web 后台 + 移动端）
+
+商铺管理员（水站老板/运营人员）通过 Web 端与移动端管理日常运营：
+
+### 账户与安全
+
+- **账户注册登录**：商铺管理员通过手机号注册账号，提交商铺资质材料等待平台审核，审核通过后登录系统。
+- **密码修改**：修改账户密码，保障账户安全。
+
+### 商铺与商品
+
+- **商铺信息**：维护商铺基本信息，包括商铺名称、位置描述（支持地图选点）、联系电话、营业时间、服务半径、商铺介绍、Logo/图片上传。
+- **我的商品**：管理本商铺商品，包括商品名称、规格（如 18.9L/15L）、价格、库存、商品图片、商品详情、上下架状态，支持商品增删改查。
+
+### 订单处理
+
+- **商家订单**：查看本商铺所有订单，支持按订单状态（待支付/待接单/配送中/已完成/已取消）筛选，支持订单接单、派单、取消等操作。
+- **订单评价**：查看用户对本商铺订单的星级评分与图文评价，了解服务反馈，支持评价回复。
+
+### 沟通与审核
+
+- **消息回复**：回复用户发送的咨询消息，解答订水疑问、确认配送细节等。
+- **用户沟通**：与用户实时在线沟通，支持文字/图片消息，沟通记录永久留存。
+- **商铺审核**：查看本商铺的资质审核状态与审核意见，审核不通过时可重新提交材料。
+
+## 用户端（微信小程序）
+
+用户通过微信小程序浏览商品、下单订水、参与社区互动：
+
+### 账户与个人
+
+- **小程序账户注册登录**：支持微信一键授权登录与手机号绑定，首次登录自动注册。
+- **我的信息**：维护个人基本信息，包括昵称、头像、手机号等。
+- **收货地址**：管理收货地址，支持新增、编辑、删除、设为默认地址，支持微信定位自动获取位置。
+
+### 购物与配送
+
+- **商品搜索**：按商品名称、品牌、规格等关键词搜索桶装水商品，支持按价格/销量排序筛选。
+- **商品购买**：浏览商品详情（水源地、规格、pH值等），选择购买数量与配送时间，提交订单并完成在线支付（微信支付）。
+- **加入购物车**：将商品加入购物车，支持购物车内商品数量增减、删除、批量结算。
+- **我的订单**：查看个人所有订单，包括订单状态（待支付/待接单/配送中/已完成/已取消），支持取消订单、确认收货、申请退款。
+- **订单评价**：订单完成后对商铺服务与商品质量进行星级评分与图文评价，分享真实体验。
+
+### 社区互动
+
+- **社区论坛**：浏览社区帖子，包括饮水健康知识、用户经验分享、优惠活动讨论等，支持发帖与回复。
+- **我的贴子**：查看个人发布的所有论坛帖子，支持帖子编辑与删除。
+- **消息回复**：回复他人帖子或私信消息，参与社区讨论。
+- **消息通知**：接收系统消息（订单状态变更/支付结果/审核通知）与商铺回复消息，支持消息标记已读与删除。
+
+---
+
+## 项目结构
+
+```text
+pharmacy-dispensing-system/
+├── backend/            # 后端 API 服务
+│   ├── src/
+│   │   ├── controllers/  # 控制器
+│   │   ├── models/       # 数据模型
+│   │   ├── routes/       # 路由
+│   │   └── services/     # 业务逻辑
+│   └── package.json
+├── frontend/           # 前端 Web 应用
+│   ├── src/
+│   │   ├── views/      # 页面视图
+│   │   ├── components/ # 公共组件
+│   │   └── store/      # 状态管理
+│   └── package.json
+├── docs/               # 项目文档与 API 接口说明
+├── LICENSE
+└── README.md
+```
+---
 
 
 #### 前台启动方式
@@ -79,29 +170,29 @@ WebStorm OR VScode 编译器 [https://www.jianshu.com/p/d63b5bae9dff]
 #### 默认后台账户密码
 [管理员]
 admin
-1234qwer
+123456
+
+[用户]
+fank
+123456
 
 #### 项目截图
-暂无
+|  |  |
+|---------------------|---------------------|
+| ![](./assets/image%20(1).png) | ![](./assets/image%20(2).png) |
+| ![](./assets/image%20(3).png) | ![](./assets/image%20(4).png) |
+| ![](./assets/image%20(5).png) | ![](./assets/image%20(6).png) |
+| ![](./assets/image%20(7).png) | ![](./assets/image%20(8).png) |
+| ![](./assets/image%20(9).png) | ![](./assets/image%20(10).png) |
 
 |  |  |
 |---------------------|---------------------|
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/d0feb887-0aa8-4921-9dc7-717aa8e24d69.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/96eb7596-0665-4cac-8631-430672151521.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/c7a824a0-e380-4619-a5fd-4aa1ae17da3b.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/8e2e16e2-aa88-41ab-868f-649e7f5c777f.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/27952767-e3e2-4853-8c3a-6ea873d517e7.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/8a5f3ed5-0ddc-40d2-822d-5b11d96cf6e3.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/353f4c71-ab1a-4238-8e64-8d921d14fcb8.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/7b0269ce-cb80-41e8-957e-706ad8a48ef2.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/99a89ed9-d18a-4a9d-9738-46f6ee2a896f.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/2c4702a5-0b41-4b14-a6b1-13656a31f0db.png) |
-
-|  |  |
-|---------------------|---------------------|
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/44ff8775-6d6b-4aa2-ac67-27cb6185f2ba.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/a56aee38-10d7-44df-916f-a011bbb9339d.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/6e159ced-0c30-4086-8db3-c2c820f53961.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/263582b2-85ed-4a2d-b4ac-557bac6fde6d.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/3bbed924-7595-474c-902f-f852e391758f.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/2956b8cb-fcc5-4527-8268-b1c02c7d0557.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1d365bb4-5fcf-4c4f-be24-2f947a941fa2.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/638afc4f-a4d4-4989-837d-efb4c6ef9261.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/d26db9c1-4d27-4a20-bd63-2a28e4f4eb41.png) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/353f4c71-ab1a-4238-8e64-8d921d14fcb8.png) |
-| ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/be74547a-5f0e-4eb0-b07c-18d7f0c4ac97.png) |  |
-
-![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/work/936e9baf53eb9a217af4f89c616dc19.png)
+| ![](./assets/app_image%20(1).png) | ![](./assets/app_image%20(2).png) |
+| ![](./assets/app_image%20(3).png) | ![](./assets/app_image%20(4).png) |
+| ![](./assets/app_image%20(5).png) | ![](./assets/app_image%20(6).png) |
+| ![](./assets/app_image%20(7).png) | ![](./assets/app_image%20(8).png) |
+| ![](./assets/app_image%20(9).png) | ![](./assets/app_image%20(10).png) |
+| ![](./assets/app_image%20(11).png) |
 
 #### 演示视频
 
@@ -119,7 +210,10 @@ WeChat: `Storm_Berserker`
 
 > 项目部署调试不好包退！功能逻辑没讲明白包退！
 
+<div align=center><img align="center" src="./assets/product_word.png" alt="fankekeke" /></div>
+
 #### 其它资源
+[2026年-答辩顺利通过-客户评价🀄](https://berserker287.github.io/2026/06/29/2026%E5%B9%B4%E7%AD%94%E8%BE%A9%E9%A1%BA%E5%88%A9%E9%80%9A%E8%BF%87/)
 
 [2025年-答辩顺利通过-客户评价🍜](https://berserker287.github.io/2025/06/18/2025%E5%B9%B4%E7%AD%94%E8%BE%A9%E9%A1%BA%E5%88%A9%E9%80%9A%E8%BF%87/)
 
@@ -143,4 +237,8 @@ WeChat: `Storm_Berserker`
 
 More info: [悲伤的橘子树](https://berserker287.github.io/)
 
-<p><img align="center" src="https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/%E5%90%88%E4%BD%9C%E7%89%A9%E6%96%99%E6%A0%B7%E5%BC%8F%20(3).png" alt="fankekeke" /></p>
+<div align="center"><img align="center" src="./assets/chat_qr_code.png" alt="fankekeke" width=250 /></div>
+
+<p><img align="center" src="./assets/wechat_group.png" alt="fankekeke" /></p>
+
+**感谢查看**
